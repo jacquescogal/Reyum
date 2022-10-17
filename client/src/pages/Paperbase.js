@@ -10,11 +10,11 @@ import Content from './Content';
 import Header from './Header';
 
 function Copyright() {
-  return (
+  return (//Link to about page
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/">
-        Your Website
+      <Link color="inherit" href="https://mui.com/"> 
+        Reyum
       </Link>{' '}
       {new Date().getFullYear()}.
     </Typography>
