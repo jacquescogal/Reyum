@@ -17,44 +17,43 @@ import Typography from '@mui/material/Typography';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 
-const lightColor = 'rgba(255, 255, 255, 0.7)';
 
 const Header=({setMobileOpen})=> {
 
   return (
     <React.Fragment>
-      <AppBar color="primary" position="sticky" elevation={0}>
+      <AppBar
+        component="div"
+        color="primary"
+        position="static"
+        elevation={0}
+        sx={{ zIndex: 0 }}
+      >
         <Toolbar>
-          <Grid container spacing={1} alignItems="center">
-            <Grid sx={{ display: { sm: 'none', xs: 'block' } }} item>
-              <IconButton
-                color="inherit"
-                aria-label="open drawer"
-                onClick={()=>{setMobileOpen(true)}}
-                edge="start"
-              >
-                <MenuIcon />
-              </IconButton>
+          <Grid container alignItems="flex-start" spacing={0}>
+            <Grid item xs>
+              <Typography color="inherit" variant="h5" component="h1" >
+                Menu
+              </Typography>
             </Grid>
-            <Grid item xs />
             <Grid item>
             </Grid>
             <Grid item>
-              <Tooltip title="Open cart">
+              <Tooltip title="Help">
                 <IconButton color="inherit">
-                  <ShoppingCartIcon />
+                  <HelpIcon />
                 </IconButton>
-              </Tooltip>
-            </Grid>
-            <Grid item>
-              <Tooltip title="Guest account">
-              <IconButton color="inherit" sx={{ p: 0.5 }}>
-                <Avatar src="/static/images/avatar/1.jpg" alt="Guest" />
-              </IconButton>
               </Tooltip>
             </Grid>
           </Grid>
         </Toolbar>
+      </AppBar>
+      <AppBar component="div" position="static" elevation={0} sx={{ zIndex: 0 }}>
+        <Tabs value={0} textColor="inherit">
+          <Tab label="Signatures   " style={{width:75}}/>
+          <Tab label="Vegetarian" style={{width:75}}/>
+          <Tab label="Plus+     " style={{width:75}}/>
+        </Tabs>
       </AppBar>
     </React.Fragment>
   );

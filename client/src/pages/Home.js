@@ -8,6 +8,7 @@ import Link from '@mui/material/Link';
 import Navigator from './Navigator';
 import Content from './Content';
 import Header from './Header';
+import { Outlet } from 'react-router-dom';
 
 function Copyright() {
   return (//Link to about page
@@ -24,10 +25,11 @@ function Copyright() {
 let theme = createTheme({
   palette: {
     primary: {
-      light: '#63ccff',
-      main: '#009be5',
-      dark: '#006db3',
+        main: '#f2ebcf',
     },
+    secondary: {
+        main: '#749c74',
+      },
   },
   typography: {
     h5: {
@@ -59,7 +61,7 @@ theme = {
     MuiDrawer: {
       styleOverrides: {
         paper: {
-          backgroundColor: '#081627',
+          backgroundColor: '#749c74',
         },
       },
     },
@@ -128,7 +130,7 @@ theme = {
       styleOverrides: {
         root: {
           '&.Mui-selected': {
-            color: '#4fc3f7',
+            color: '#fff',
           },
         },
       },
@@ -166,8 +168,8 @@ theme = {
 
 const drawerWidth = 256;
 
-export default function Paperbase() {
-  const [mobileOpen, setMobileOpen] = React.useState(false);
+const Order=({mobileOpen,setMobileOpen})=> {
+  
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
 
   const handleDrawerToggle = () => {
@@ -187,7 +189,7 @@ export default function Paperbase() {
               PaperProps={{ style: { width: drawerWidth } }}
               variant="temporary"
               open={mobileOpen}
-              onClose={handleDrawerToggle}
+              onClose={(handleDrawerToggle)}
             />
           )}
 
@@ -197,15 +199,12 @@ export default function Paperbase() {
           />
         </Box>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-          <Header onDrawerToggle={handleDrawerToggle} />
-          <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
-            <Content />
-          </Box>
-          <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
-            <Copyright />
+            <Header setMobileOpen={setMobileOpen}/>
+          <Outlet/>
           </Box>
         </Box>
-      </Box>
     </ThemeProvider>
   );
 }
+
+export default Order;
