@@ -9,14 +9,13 @@ import Navigator from './Navigator';
 import Content from './Content';
 import Header from './Header';
 import { Outlet } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function Copyright() {
   return (//Link to about page
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://mui.com/"> 
         Reyum
-      </Link>{' '}
       {new Date().getFullYear()}.
     </Typography>
   );
@@ -169,6 +168,12 @@ theme = {
 const drawerWidth = 256;
 
 const Order=({mobileOpen,setMobileOpen})=> {
+
+  const navigate=useNavigate();
+  
+  React.useEffect(()=>{
+    navigate('/menu')
+  },[])
   
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
 

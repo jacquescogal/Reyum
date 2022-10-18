@@ -25,8 +25,7 @@ const categories = [
     children: [
       {
         id: 'Menu',
-        icon: <RestaurantMenuIcon />,
-        active: true,
+        icon: <RestaurantMenuIcon />
       },
       { id: 'History', icon: <HistoryIcon /> },
       { id: 'Settings', icon: <SettingsIcon /> },
@@ -61,8 +60,8 @@ const itemCategory = {
 export default function Navigator(props) {
 
   const [select,setSelect]=useState({
-    'Menu':false,
-    'History':true,
+    'Menu':true,
+    'History':false,
     'Feedback':false,
     'Our Story':false,
     'Our People':false,
