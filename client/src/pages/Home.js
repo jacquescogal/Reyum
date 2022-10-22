@@ -19,8 +19,8 @@ function Copyright() {
   return (//Link to about page
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
-        Reyum
-      {new Date().getFullYear()}.
+        {'Reyum '}
+       { new Date().getFullYear()}.
     </Typography>
   );
 }
@@ -192,20 +192,18 @@ const Home=({mobileOpen,setMobileOpen,pageTitle})=> {
         <CssBaseline />
         <Box
           component="nav"
-          sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
+          sx={{ flexShrink: 0  }}
         >
-          {isSmUp ? null : (
             <Navigator
               PaperProps={{ style: { width: drawerWidth } }}
               variant="temporary"
               open={mobileOpen}
               onClose={(handleDrawerToggle)}
             />
-          )}
 
           <Navigator
             PaperProps={{ style: { width: drawerWidth } }}
-            sx={{ display: { sm: 'block', xs: 'none' } }}
+            sx={{ display:'none'  }}
           />
         </Box>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>

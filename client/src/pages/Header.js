@@ -15,25 +15,29 @@ import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useState } from 'react';
 
 
 const lightColor = 'rgba(255, 255, 255, 0.7)';
 
 const Header=({setMobileOpen,pageTitle})=> {
 
+  const [menuPing,setMenuPing]=useState(true);
+
   return (
     <React.Fragment>
-      <AppBar color="primary" position="sticky" elevation={0}>
+      <AppBar color="primary" position="sticky" elevation={0} className='bg-orange-200'>
         <Toolbar>
           <Grid container spacing={1} alignItems="center">
-            <Grid sx={{ display: { sm: 'none', xs: 'block' } }} item>
+            <Grid sx={{ display: 'block'  }} item>
               <IconButton
                 color="inherit"
                 aria-label="open drawer"
-                onClick={()=>{setMobileOpen(true)}}
+                onClick={()=>{setMobileOpen(true);setMenuPing(false)}}
                 edge="start"
               >
                 <MenuIcon />
+                {(menuPing==true)?<MenuIcon className='absolute animate-ping'/>:null}
               </IconButton>
             </Grid>
             

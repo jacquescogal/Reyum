@@ -22,9 +22,11 @@ import CircularProgress from '@mui/material/CircularProgress';
 import { Backdrop } from '@mui/material';
 import Home from '@mui/icons-material/Home';
 import HomePage from './pages/HomePage';
+import PopupCard from './components/PopupCard';
 
 function App() {
   const [pageTitle,setPageTitle]=useState('Home')
+  const [popup,setPopup]=useState(true)
   const [data,setData]=useState(null);
   const [loading,setLoading]=useState(false);
 
@@ -41,10 +43,9 @@ function App() {
         <ToastContainer/>
         <Backdrop
         sx={{ color: 'white',bgcolor:'rgba(255, 255, 255, 0.5)', zIndex: (theme) => theme.zIndex.drawer + 1 }}
-        open={loading}
+        open={popup}
       >
-        <p>loading...</p>
-        <CircularProgress color="primary" />
+        <PopupCard setPopup={setPopup}/>
       </Backdrop>
         <Routes>
             <Route path='/' element={<Homepage mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} pageTitle={pageTitle}/>}>
