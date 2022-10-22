@@ -19,7 +19,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const lightColor = 'rgba(255, 255, 255, 0.7)';
 
-const Header=({setMobileOpen})=> {
+const Header=({setMobileOpen,pageTitle})=> {
 
   return (
     <React.Fragment>
@@ -36,9 +36,14 @@ const Header=({setMobileOpen})=> {
                 <MenuIcon />
               </IconButton>
             </Grid>
-            <Grid item xs />
+            
+            <Grid item xs >
+              <h1 className='font-serif '>{pageTitle}</h1>
+            </Grid>
+            
             <Grid item>
             </Grid>
+            
             <Grid item>
               <Tooltip title="Open cart">
                 <IconButton color="inherit">

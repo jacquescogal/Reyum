@@ -15,10 +15,11 @@ import Toolbar from '@mui/material/Toolbar';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { useEffect } from 'react';
 
 
 
-const Header=({setMobileOpen})=> {
+const Header=()=> {
 
   return (
     <React.Fragment>
@@ -29,24 +30,6 @@ const Header=({setMobileOpen})=> {
         elevation={0}
         sx={{ zIndex: 0 }}
       >
-        <Toolbar>
-          <Grid container alignItems="flex-start" spacing={0}>
-            <Grid item xs>
-              <Typography color="inherit" variant="h5" component="h1" >
-                Menu
-              </Typography>
-            </Grid>
-            <Grid item>
-            </Grid>
-            <Grid item>
-              <Tooltip title="Help">
-                <IconButton color="inherit">
-                  <HelpIcon />
-                </IconButton>
-              </Tooltip>
-            </Grid>
-          </Grid>
-        </Toolbar>
       </AppBar>
       <AppBar component="div" position="static" elevation={0} sx={{ zIndex: 0 }}>
         <Tabs value={0} textColor="inherit">

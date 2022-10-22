@@ -10,8 +10,12 @@ import Content from './Content';
 import Header from './Header';
 import { Outlet } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 function Copyright() {
+    
+
+
   return (//Link to about page
     <Typography variant="body2" color="text.secondary" align="center">
       {'Copyright © '}
@@ -167,12 +171,13 @@ theme = {
 
 const drawerWidth = 256;
 
-const Order=({mobileOpen,setMobileOpen})=> {
+const Home=({mobileOpen,setMobileOpen,pageTitle})=> {
+  
 
   const navigate=useNavigate();
   
   React.useEffect(()=>{
-    navigate('/menu')
+    navigate('/Home')
   },[])
   
   const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
@@ -204,12 +209,15 @@ const Order=({mobileOpen,setMobileOpen})=> {
           />
         </Box>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-            <Header setMobileOpen={setMobileOpen}/>
+            <Header setMobileOpen={setMobileOpen} pageTitle={pageTitle}/>
           <Outlet/>
+          <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
+            <Copyright />
+          </Box>
           </Box>
         </Box>
     </ThemeProvider>
   );
 }
 
-export default Order;
+export default Home;

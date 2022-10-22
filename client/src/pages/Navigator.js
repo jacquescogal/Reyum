@@ -18,8 +18,6 @@ import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 const categories = [
-  
-
   {
     id: 'Meals',
     children: [
@@ -60,12 +58,13 @@ const itemCategory = {
 export default function Navigator(props) {
 
   const [select,setSelect]=useState({
-    'Menu':true,
+    'Menu':false,
     'History':false,
     'Feedback':false,
     'Our Story':false,
     'Our People':false,
-    'Our Partners':false
+    'Our Partners':false,
+    'Home':true
   })
   const { ...other } = props;
 
@@ -77,10 +76,26 @@ export default function Navigator(props) {
       <ListItem >
           <img src={`${process.env.PUBLIC_URL}/reyum.png`} height={200} width={200}/>
         </ListItem>
+        <ListItem sx={{px:3,color:'#fff'}}>
+        <ListItemButton selected={select['Home']} sx={item} onClick={()=>{const myObject=select;for (const property in myObject){
+                  if (property!='Home'){
+                    myObject[property]=false
+                  }
+                  else{
+                    myObject[property]=true
+                  }
+                };setSelect(myObject);navigate('/'+'Home'.split(' ')[0]+('Home'.split(' ')[1]?'Home'.split(' ')[1]:''))}}>
+          <ListItemIcon>
+            <HomeIcon />
+          </ListItemIcon>
+          <ListItemText>Home</ListItemText>
+          </ListItemButton>
+        </ListItem>
         {categories.map(({ id, children }) => (
           <Box key={id} sx={{ bgcolor: 'rgb(143, 175, 143)' }}>
             <ListItem sx={{ py: 2, px: 3 }}>
               <ListItemText sx={{ color: '#fff' }}>{id}</ListItemText>
+              
             </ListItem>
             {children.map(({ id: childId, icon, active }) => (
               <ListItem disablePadding key={childId}>

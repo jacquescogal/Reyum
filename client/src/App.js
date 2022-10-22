@@ -21,8 +21,10 @@ import { ToastContainer, toast } from 'react-toastify';
 import CircularProgress from '@mui/material/CircularProgress';
 import { Backdrop } from '@mui/material';
 import Home from '@mui/icons-material/Home';
+import HomePage from './pages/HomePage';
 
 function App() {
+  const [pageTitle,setPageTitle]=useState('Home')
   const [data,setData]=useState(null);
   const [loading,setLoading]=useState(false);
 
@@ -45,14 +47,15 @@ function App() {
         <CircularProgress color="primary" />
       </Backdrop>
         <Routes>
-            <Route path='/' element={<Homepage mobileOpen={mobileOpen} setMobileOpen={setMobileOpen}/>}>
-              <Route path="Menu" element={<Order/>}/>
-              <Route path="History" element={<History />}/> 
-              <Route path="Feedback" element={<Feedback />}/>
-              <Route path="Settings" element={<Settings />}/>
-              <Route path="OurStory" element={<OurStory />}/>
-              <Route path="OurPeople" element={<OurPeople />}/>
-              <Route path="OurPartners" element={<OurPartners />}/>
+            <Route path='/' element={<Homepage mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} pageTitle={pageTitle}/>}>
+              <Route path="Home" element={<HomePage setPageTitle={setPageTitle}/>}/>
+              <Route path="Menu" element={<Order setPageTitle={setPageTitle}/>}/>
+              <Route path="History" element={<History setPageTitle={setPageTitle}/>}/> 
+              <Route path="Feedback" element={<Feedback setPageTitle={setPageTitle}/>}/>
+              <Route path="Settings" element={<Settings setPageTitle={setPageTitle}/>}/>
+              <Route path="OurStory" element={<OurStory setPageTitle={setPageTitle}/>}/>
+              <Route path="OurPeople" element={<OurPeople setPageTitle={setPageTitle}/>}/>
+              <Route path="OurPartners" element={<OurPartners setPageTitle={setPageTitle}/>}/>
             </Route>
             <Route path="*" element={<p>There's nothing here: 404!</p>} />
         </Routes>
