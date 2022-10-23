@@ -23,6 +23,8 @@ import { Backdrop } from '@mui/material';
 import Home from '@mui/icons-material/Home';
 import HomePage from './pages/HomePage';
 import PopupCard from './components/PopupCard';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   const [pageTitle,setPageTitle]=useState('Home')
@@ -49,10 +51,12 @@ function App() {
       </Backdrop>
         <Routes>
             <Route path='/' element={<Homepage mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} pageTitle={pageTitle}/>}>
+              <Route path="Login" element={<Login setPageTitle={setPageTitle}/>}/>
+              <Route path="Register" element={<Register setPageTitle={setPageTitle}/>}/>
               <Route path="Home" element={<HomePage setPageTitle={setPageTitle}/>}/>
               <Route path="Menu" element={<Order setPageTitle={setPageTitle}/>}/>
               <Route path="History" element={<History setPageTitle={setPageTitle}/>}/> 
-              <Route path="Feedback" element={<Feedback setPageTitle={setPageTitle}/>}/>
+              <Route path="HelpDesk" element={<Feedback setPageTitle={setPageTitle}/>}/>
               <Route path="Settings" element={<Settings setPageTitle={setPageTitle}/>}/>
               <Route path="OurStory" element={<OurStory setPageTitle={setPageTitle}/>}/>
               <Route path="OurPeople" element={<OurPeople setPageTitle={setPageTitle}/>}/>

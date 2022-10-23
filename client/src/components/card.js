@@ -13,21 +13,12 @@ const BasicCard = ({name,imgSrc,price}) =>{
  
   let navigate=useNavigate();
   return (
-    <div class="max-w-xl max-h-xs h-96 mx-2.5 mt-2 rounded-lg border border-gray-0 shadow-md dark:bg-gray-0 dark:border-gray-0">
-    <a href="#">
-    <img class="object-cover h-48 w-96" src = {imgSrc} alt = "" />
-    </a>
-    <div class="p-3">
-        <a >
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-gray-500">{name}</h5>
-        </a>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{price}</p>
-        <a href="#" class="inline-flex items-center py-2 px-3 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Add to cart
-            <i class="fa fa-shopping-cart mr-2"></i>
-            <AddIcon/>
-        </a>
+    <div class="relative w-fit max-w-fit max-h-xs h-fit overflow-hidden mx-2.5 mt-2 rounded-lg border border-gray-0 shadow-md group ">
+    <img class="transition ease-in-out object-cover h-48 w-96 rounded-tr-lg rounded-bl-lg group-hover:scale-150" src = {imgSrc} alt = "" />
+    <div class="absolute bg-black/50 text-white w-full h-full transform duration-500 top-[80%] bottom-[90%] content-center group-hover:-inset-y-0">
+    <p class="">{name}</p>  
     </div>
+    
 </div>
   );
 

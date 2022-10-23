@@ -17,6 +17,7 @@ import ChatIcon from '@mui/icons-material/Chat';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import HelpCenterIcon from '@mui/icons-material/HelpCenter';
 const categories = [
   {
     id: 'Meals',
@@ -27,7 +28,7 @@ const categories = [
       },
       { id: 'History', icon: <HistoryIcon /> },
       { id: 'Settings', icon: <SettingsIcon /> },
-      { id: 'Feedback', icon: <ChatIcon /> }
+      { id: 'Help Desk', icon: <HelpCenterIcon /> }
     ],
   },
   {

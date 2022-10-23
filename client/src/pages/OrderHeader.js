@@ -19,17 +19,35 @@ import { useEffect } from 'react';
 
 
 
-const Header=()=> {
+const Header=({tabSelect,setTabSelect})=> {
 
   return (
-      <div class='flex justify-center bg-orange-100 width-5/6'>
-          <button class='text-center text-black font-sans font-semibold w-60 h-10 hover:bg-white'>Signatures
+      <div class='flex justify-center bg-white width-5/6'>
+          <button class={(tabSelect['Signature']==false)?'text-center text-black font-sans font-semibold w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-60 h-10 bg-orange-100'} onClick={()=>{
+            setTabSelect({
+              Signature:true,
+              Vegetarian:false,
+              Plus:false
+            });
+          }}>Signatures
           <span class='text-xl'>🍳</span>
           </button>
-          <button class='text-center text-black font-sans font-semibold w-60 h-10 hover:bg-white'>Vegetarian
+          <button class={(tabSelect['Vegetarian']==false)?'text-center text-black font-sans font-semibold w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-60 h-10 bg-orange-100'} onClick={()=>{
+            setTabSelect({
+              Signature:false,
+              Vegetarian:true,
+              Plus:false
+            });
+          }}>Vegetarian
           <span class='text-xl'>🥕</span>
           </button>
-          <button class='text-center text-black font-sans font-semibold w-60 h-10 hover:bg-white'>Plus+
+          <button button class={(tabSelect['Plus']==false)?'text-center text-black font-sans font-semibold w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-60 h-10 bg-orange-100'} onClick={()=>{
+            setTabSelect({
+              Signature:false,
+              Vegetarian:false,
+              Plus:true
+            });
+          }}>Plus+
           <span class='text-xl'>⭐</span>
           </button>
       </div>

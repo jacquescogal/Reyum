@@ -188,17 +188,18 @@ const Home=({mobileOpen,setMobileOpen,pageTitle})=> {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: 'flex', minHeight: '100vh' }}>
+      <Box sx={{ flexShrink: 1, display: 'flex'}}>
         <CssBaseline />
         <Box
           component="nav"
-          sx={{ flexShrink: 0  }}
+          sx={{ flexShrink: 1  }}
         >
             <Navigator
               PaperProps={{ style: { width: drawerWidth } }}
               variant="temporary"
               open={mobileOpen}
               onClose={(handleDrawerToggle)}
+              setMobileOpen={setMobileOpen}
             />
 
           <Navigator
@@ -206,7 +207,7 @@ const Home=({mobileOpen,setMobileOpen,pageTitle})=> {
             sx={{ display:'none'  }}
           />
         </Box>
-        <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
+        <Box sx={{ flex: 1, flexShrink: 1, display: 'flex', flexDirection: 'column' }}>
             <Header setMobileOpen={setMobileOpen} pageTitle={pageTitle}/>
           <Outlet/>
           <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>

@@ -37,6 +37,12 @@ export default function Order({setPageTitle}) {
   },[])
   
   const [mobileOpen, setMobileOpen] = React.useState(false);
+  const [tabSelect,setTabSelect]=React.useState({
+    Signature:true,
+    Vegetarian:false,
+    Plus:false
+  })
+
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -51,18 +57,13 @@ export default function Order({setPageTitle}) {
         >
         </Box>
         <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-          <OrderHeader/>
-          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4 content-start mb-1 flex-grow-1">
+          <OrderHeader tabSelect={tabSelect} setTabSelect={setTabSelect}/>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-0 content-start mb-1 flex-grow-1 bg-gradient-to-b from-orange-100 to-orange-200">
             <BasicCard name={'Chop Suey'} imgSrc={`${process.env.PUBLIC_URL}/chopsuey.jpg`} price={'$5.99'}/>
             <BasicCard name={'Chicken Curry'} imgSrc={`${process.env.PUBLIC_URL}/curry.jpeg`} price={'$6.50'}/>
             <BasicCard name={'Ratatouille'} imgSrc={`${process.env.PUBLIC_URL}/ratatouille.jpg`} price={'$5.50'}/>
             <BasicCard name={'Vegebowl'} imgSrc={`${process.env.PUBLIC_URL}/vegebowl.jpg`} price={'$5.49'}/>
-            <BasicCard name={'Vegebowl'} imgSrc={`${process.env.PUBLIC_URL}/vegebowl.jpg`} price={'$5.49'}/>
-            <BasicCard name={'Chop Suey'} imgSrc={`${process.env.PUBLIC_URL}/chopsuey.jpg`} price={'$5.99'}/>
-            <BasicCard name={'Chicken Curry'} imgSrc={`${process.env.PUBLIC_URL}/curry.jpeg`} price={'$6.50'}/>
-            <BasicCard name={'Ratatouille'} imgSrc={`${process.env.PUBLIC_URL}/ratatouille.jpg`} price={'$5.50'}/>
-            <BasicCard name={'Vegebowl'} imgSrc={`${process.env.PUBLIC_URL}/vegebowl.jpg`} price={'$5.49'}/>
-            <BasicCard name={'Vegebowl'} imgSrc={`${process.env.PUBLIC_URL}/vegebowl.jpg`} price={'$5.49'}/>
+            <BasicCard name={'Chicken Masala'} imgSrc={`https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80`} price={'$5.49'}/>
           </div>
         </Box>
       </Box>
