@@ -1,6 +1,9 @@
 import React from 'react'
 
-const History = () => {
+const History = ({setPageTitle}) => {
+  React.useEffect(()=>{
+    setPageTitle('History')
+  },[])
   return (
     <div>History</div>
   )
