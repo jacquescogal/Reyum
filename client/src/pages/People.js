@@ -50,7 +50,7 @@ const People = ({setPageTitle}) => {
               <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Beta does not support subscription")}}>Get Started</button>
           </div>
           <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow  xl:p-8  ">
-              <h3 class="mb-4 text-2xl font-semibold">Company</h3>
+              <h3 class="mb-4 text-2xl font-semibold">Plump Tomato</h3>
               <p class="font-light text-gray-500 sm:text-lg ">Relevant for multiple users, extended & premium support.</p>
               <div class="flex justify-center items-baseline my-8">
               <span class="text-gray-500 line-through">$225</span>
@@ -85,7 +85,7 @@ const People = ({setPageTitle}) => {
               <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Beta does not support subscription")}}>Get Started</button>
           </div>
           <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow  xl:p-8  ">
-              <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
+              <h3 class="mb-4 text-2xl font-semibold">Ugly Delicious Tomato</h3>
               <p class="font-light text-gray-500 sm:text-lg ">Best for large scale uses and extended redistribution rights.</p>
               <div class="flex justify-center items-baseline my-8">
               <span class="text-gray-500 line-through">$675</span>
