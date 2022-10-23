@@ -22,23 +22,17 @@ import { useEffect } from 'react';
 const Header=()=> {
 
   return (
-    <React.Fragment>
-      <AppBar
-        component="div"
-        color="primary"
-        position="static"
-        elevation={0}
-        sx={{ zIndex: 0 }}
-      >
-      </AppBar>
-      <AppBar component="div" position="static" elevation={0} sx={{ zIndex: 0 }}>
-        <Tabs value={0} textColor="inherit">
-          <Tab label="Signatures   " style={{width:75}}/>
-          <Tab label="Vegetarian" style={{width:75}}/>
-          <Tab label="Plus+     " style={{width:75}}/>
-        </Tabs>
-      </AppBar>
-    </React.Fragment>
+      <div class='flex justify-center bg-orange-100 width-5/6'>
+          <button class='text-center text-black font-sans font-semibold w-60 h-10 hover:bg-white'>Signatures
+          <span class='text-xl'>🍳</span>
+          </button>
+          <button class='text-center text-black font-sans font-semibold w-60 h-10 hover:bg-white'>Vegetarian
+          <span class='text-xl'>🥕</span>
+          </button>
+          <button class='text-center text-black font-sans font-semibold w-60 h-10 hover:bg-white'>Plus+
+          <span class='text-xl'>⭐</span>
+          </button>
+      </div>
   );
 }
 
