@@ -59,7 +59,7 @@ function App() {
               <Route path="HelpDesk" element={<Feedback setPageTitle={setPageTitle}/>}/>
               <Route path="Settings" element={<Settings setPageTitle={setPageTitle}/>}/>
               <Route path="OurStory" element={<OurStory setPageTitle={setPageTitle}/>}/>
-              <Route path="OurPeople" element={<OurPeople setPageTitle={setPageTitle}/>}/>
+              <Route path="SubscriptionPlans" element={<OurPeople setPageTitle={setPageTitle}/>}/>
               <Route path="OurPartners" element={<OurPartners setPageTitle={setPageTitle}/>}/>
             </Route>
             <Route path="*" element={<p>There's nothing here: 404!</p>} />

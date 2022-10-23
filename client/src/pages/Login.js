@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import LoginHeader from './LoginHeader'
 import { useState } from 'react'
 import { toast } from 'react-toastify'
-const Login = () => {
+const Login = ({setPageTitle}) => {
     const [login,setLogin]=useState(true)
+
+    useEffect(()=>{
+        if (login===true){
+            setPageTitle('Login')
+        }
+        else{
+            setPageTitle('Register')
+        }
+    },[login])
+
   return (
     <div>
         <LoginHeader login={login} setLogin={setLogin}/>

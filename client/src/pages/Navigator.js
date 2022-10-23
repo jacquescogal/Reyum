@@ -13,30 +13,23 @@ import SettingsIcon from '@mui/icons-material/Settings';
 import AutoStoriesIcon from '@mui/icons-material/AutoStories';
 import HandshakeIcon from '@mui/icons-material/Handshake';
 import HistoryIcon from '@mui/icons-material/History';
-import ChatIcon from '@mui/icons-material/Chat';
+import LoyaltyIcon from '@mui/icons-material/Loyalty';
 import RestaurantMenuIcon from '@mui/icons-material/RestaurantMenu';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import HelpCenterIcon from '@mui/icons-material/HelpCenter';
 const categories = [
   {
-    id: 'Meals',
+    id: 'Directory',
     children: [
       {
         id: 'Menu',
         icon: <RestaurantMenuIcon />
       },
+      { id: 'Subscription Plans', icon: <LoyaltyIcon /> },
       { id: 'History', icon: <HistoryIcon /> },
-      { id: 'Settings', icon: <SettingsIcon /> },
-      { id: 'Help Desk', icon: <HelpCenterIcon /> }
-    ],
-  },
-  {
-    id: 'About us',
-    children: [
-      { id: 'Our Story', icon: <AutoStoriesIcon /> },
-      { id: 'Our People', icon: <PeopleIcon /> },
       { id: 'Our Partners', icon: <HandshakeIcon /> },
+      { id: 'Help Desk', icon: <HelpCenterIcon /> },
     ],
   },
 ];
@@ -64,12 +57,13 @@ export default function Navigator(props) {
     'Feedback':false,
     'Our Story':false,
     'Our People':false,
-    'Our Partners':false,
+    'Subscription Plans':false,
     'Home':true
   })
   const { ...other } = props;
 
   const navigate=useNavigate();
+  
 
   return (
     <Drawer variant="permanent" {...other}>

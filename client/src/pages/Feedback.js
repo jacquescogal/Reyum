@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const Feedback = () => {
+const Feedback = ({setPageTitle}) => {
+  useEffect(()=>{
+    setPageTitle("Help Desk")
+  },[])
   return (
     <div >
       <div class="w-screen flex justify-center bg-gradient-to-t from-orange-100 to-orange-200">

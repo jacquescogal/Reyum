@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 
 const PopupCard = ({setPopup}) => {
   return (
-    <div class=" relative max-w-sm bg-orange-100 rounded-lg border border-gray-200 shadow-md">
+    <div class=" relative max-w-sm h-fit bg-orange-100 rounded-lg border border-gray-200 shadow-md">
         <button type="button" class="absolute right-0 top-0 bg-red-100 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-red-500 hover:bg-red-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" onClick={()=>{setPopup(false)}}>
               <span class="sr-only">Close menu</span>
               <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">

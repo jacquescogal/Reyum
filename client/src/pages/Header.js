@@ -19,8 +19,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-const lightColor = 'rgba(255, 255, 255, 0.7)';
-
 const Header=({setMobileOpen,pageTitle})=> {
   const navigate=useNavigate();
 
@@ -36,7 +34,7 @@ const Header=({setMobileOpen,pageTitle})=> {
       </span>
       <span class="relative text-white">{" off your next purchase when you refer a friend"}</span>
     </blockquote>
-      <AppBar color="primary" position="sticky" elevation={0} className='bg-orange-200'>
+      <AppBar color="primary" position="sticky" elevation={0}>
         <Toolbar>
           <Grid container spacing={1} alignItems="center">
             <Grid sx={{ display: 'block'  }} item>
