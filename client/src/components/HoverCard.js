@@ -20,7 +20,7 @@ const HoverCard = ({cardObject}) => {
       <p class="font-sans text-center w-4/5 text-white mt-5">{cardObject.description}</p>
     </div>
     <div class="absolute w-full flex place-content-center bottom-16">
-    <button class="absolute bottom-16 bg-slate-100 text-black font-bold rounded-lg h-10 w-48 hover:bg-slate-500" onClick={()=>{toggleGood()}}>The Problem</button>
+    <button class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 absolute bottom-16 bg-slate-100 text-black font-bold rounded-lg h-10 w-48 hover:bg-red-500" onClick={()=>{toggleGood()}}>The Problem</button>
     </div>
   </div>
 </div>:
@@ -35,7 +35,7 @@ const HoverCard = ({cardObject}) => {
       <p class="font-sans text-center w-4/5 text-white mt-5">{cardObject.antiDescription}</p>
     </div>
     <div class="absolute w-full flex place-content-center bottom-16">
-    <button class="absolute bottom-16 bg-slate-100 text-black font-bold rounded-lg h-10 w-48 hover:bg-slate-500" onClick={()=>{toggleGood()}}>Our Solution</button>
+    <button class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 absolute bottom-16 bg-slate-100 text-black font-bold rounded-lg h-10 w-48 hover:bg-green-500" onClick={()=>{toggleGood()}}>Our Solution</button>
     </div>
   </div>
 </div>}

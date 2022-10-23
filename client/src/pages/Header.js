@@ -26,6 +26,14 @@ const Header=({setMobileOpen,pageTitle})=> {
 
   return (
     <React.Fragment>
+      <blockquote class="text-xs md:text-base font-semibold italic text-center text-slate-900 bg-black text-white mb-0 z-1">
+      {'Get '}
+      <span class="relative">
+        <span class="block absolute -inset-0 h-1/2 top-1/4 bg-pink-500 z-0" aria-hidden="true"></span>
+        <span class="relative text-white text-md md:text-xl">$5</span>
+      </span>
+      <span class="relative text-white">{" off your next purchase when you refer a friend"}</span>
+    </blockquote>
       <AppBar color="primary" position="sticky" elevation={0} className='bg-orange-200'>
         <Toolbar>
           <Grid container spacing={1} alignItems="center">
