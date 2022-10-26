@@ -23,7 +23,12 @@ const HoverCard = ({cardObject}) => {
     {/* <button class="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 absolute bottom-4 bg-slate-100 text-black font-bold rounded-lg h-10 w-48 hover:bg-red-500" onClick={()=>{toggleGood()}}>The Problem</button> */}
     </div>
   </div>
-</div>:
+</div>
+
+
+
+
+:
 <div class="relative group w-full h-96 overflow-hidden bg-black m-auto">
   <img class="object-cover w-full h-full transform duration-700 backdrop-opacity-100" src={cardObject.antiLink} />
   <div class="absolute w-full h-full shadow-2xl opacity-20 transform duration-500 inset-y-full group-hover:-inset-y-0"></div>

@@ -39,7 +39,8 @@ const HomePage = ({setPageTitle}) => {
     <>
     <div className='bg-orange-100'>
     <p className='text-7xl xl:text-9xl bold font-serif'>reyum</p>
-    <p className='text-2xl xl:text-4xl font-sans'>Afford Earth Another Day</p>
+    <p className='text-2xl xl:text-4xl font-sans'>
+      <span class="underline">You</span> Can Afford The Earth Another Day</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 content-start h-fit">
         

@@ -24,6 +24,12 @@ const HoverCard = ({cardObject}) => {
     </div>
   </div>
 </div>:
+
+
+
+
+
+
 <div class="relative group w-full h-96 overflow-hidden bg-black m-auto">
   <img class="object-cover w-full h-full transform duration-700 backdrop-opacity-100" src={cardObject.antiLink} />
   <div class="absolute w-full h-full shadow-2xl opacity-20 transform duration-500 inset-y-full group-hover:-inset-y-0"></div>

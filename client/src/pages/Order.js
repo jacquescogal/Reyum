@@ -49,14 +49,14 @@ export default function Order({setPageTitle}) {
       return (
         
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-0 content-start mb-1 flex-grow-1 bg-gradient-to-b from-orange-100 to-orange-200">
-              <BasicCard name={'Chicken Curry'} imgSrc={`${process.env.PUBLIC_URL}/curry.jpeg`}/>
-              <BasicCard name={'Chicken Masala'} imgSrc={`https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80`}/>
-              <BasicCard name={'Chop Suey'} imgSrc={`${process.env.PUBLIC_URL}/chopsuey.jpg`}/>
-              <BasicCard name={'Jollof Rice'} imgSrc={'https://www.thespruceeats.com/thmb/9x4pFDArXhkUoiI2MqETFEr00qQ=/3333x3333/smart/filters:no_upscale()/NigerianJollofwithBeef_17-01-6d2e6477a95a4ab28ebd14f50d71c7fb.JPG'}/>
-              <BasicCard name={'Ratatouille'} imgSrc={`${process.env.PUBLIC_URL}/ratatouille.jpg`}/>
-              <BasicCard name={'Salmon Bowl'} imgSrc={'https://fitfoodiefinds.com/wp-content/uploads/2020/05/fiest-salmon-bowls-1sq.jpg'}/>
-              <BasicCard name={'Vegebowl'} imgSrc={`${process.env.PUBLIC_URL}/vegebowl.jpg`}/>
-               <BasicCard name={'Vegan Burger'} imgSrc={`https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80`}/>
+              <BasicCard name={'Chicken Curry'} imgSrc={`${process.env.PUBLIC_URL}/curry.jpeg`} description={"Curry favour with this delicious meal!"}/>
+              <BasicCard name={'Chicken Masala'} imgSrc={`https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80`} description={"Chicken spice and everything nice"}/>
+              <BasicCard name={'Chop Suey'} imgSrc={`${process.env.PUBLIC_URL}/chopsuey.jpg`} description={"Chop chop, a quick delicious meal"}/>
+              <BasicCard name={'Jollof Rice'} description={"Get jolly with jollof rice"} imgSrc={'https://www.thespruceeats.com/thmb/9x4pFDArXhkUoiI2MqETFEr00qQ=/3333x3333/smart/filters:no_upscale()/NigerianJollofwithBeef_17-01-6d2e6477a95a4ab28ebd14f50d71c7fb.JPG'}/>
+              <BasicCard name={'Ratatouille'} description={"Release your little chef"}imgSrc={`${process.env.PUBLIC_URL}/ratatouille.jpg`}/>
+              <BasicCard name={'Salmon Bowl'} description={"Salmon your inner chef"}imgSrc={'https://fitfoodiefinds.com/wp-content/uploads/2020/05/fiest-salmon-bowls-1sq.jpg'}/>
+              <BasicCard name={'Vegebowl'} description={"Can't go wrong with vegetables"} imgSrc={`${process.env.PUBLIC_URL}/vegebowl.jpg`}/>
+               <BasicCard name={'Vegan Burger'} description={"The future is here"} imgSrc={`https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80`}/>
           </div>
       )
       }
@@ -67,8 +67,8 @@ export default function Order({setPageTitle}) {
             
             
            
-            <BasicCard name={'Chop Suey'} imgSrc={`${process.env.PUBLIC_URL}/chopsuey.jpg`}/>
-            <BasicCard name={'Jollof Rice'} imgSrc={'https://www.thespruceeats.com/thmb/9x4pFDArXhkUoiI2MqETFEr00qQ=/3333x3333/smart/filters:no_upscale()/NigerianJollofwithBeef_17-01-6d2e6477a95a4ab28ebd14f50d71c7fb.JPG'}/>
+            <BasicCard name={'Chop Suey'} imgSrc={`${process.env.PUBLIC_URL}/chopsuey.jpg`} description={"Chop chop, a quick delicious meal"}/>
+            <BasicCard name={'Jollof Rice'} description={"Get jolly with jollof rice"} imgSrc={'https://www.thespruceeats.com/thmb/9x4pFDArXhkUoiI2MqETFEr00qQ=/3333x3333/smart/filters:no_upscale()/NigerianJollofwithBeef_17-01-6d2e6477a95a4ab28ebd14f50d71c7fb.JPG'}/>
         </div>
     )
     }
@@ -77,9 +77,9 @@ export default function Order({setPageTitle}) {
         
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-0 content-start mb-1 flex-grow-1 bg-gradient-to-b from-orange-100 to-orange-200">
               
-              <BasicCard name={'Ratatouille'} imgSrc={`${process.env.PUBLIC_URL}/ratatouille.jpg`}/>
-              <BasicCard name={'Vegebowl'} imgSrc={`${process.env.PUBLIC_URL}/vegebowl.jpg`}/>
-              <BasicCard name={'Vegan Burger'} imgSrc={`https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80`}/>
+              <BasicCard name={'Ratatouille'} description={"Release your little chef"}imgSrc={`${process.env.PUBLIC_URL}/ratatouille.jpg`}/>
+              <BasicCard name={'Vegebowl'} description={"Can't go wrong with vegetables"} imgSrc={`${process.env.PUBLIC_URL}/vegebowl.jpg`}/>
+               <BasicCard name={'Vegan Burger'} description={"The future is here"} imgSrc={`https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80`}/>
              
           </div>
       )
@@ -89,9 +89,9 @@ export default function Order({setPageTitle}) {
           
           <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-0 content-start mb-1 flex-grow-1 bg-gradient-to-b from-orange-100 to-orange-200">
                 
-                <BasicCard name={'Chicken Curry'} imgSrc={`${process.env.PUBLIC_URL}/curry.jpeg`}/>
-                <BasicCard name={'Chicken Masala'} imgSrc={`https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80`}/>
-                <BasicCard name={'Salmon Bowl'} imgSrc={'https://fitfoodiefinds.com/wp-content/uploads/2020/05/fiest-salmon-bowls-1sq.jpg'}/>
+                <BasicCard name={'Chicken Curry'} imgSrc={`${process.env.PUBLIC_URL}/curry.jpeg`} description={"Curry favour with this delicious meal!"}/>
+              <BasicCard name={'Chicken Masala'} imgSrc={`https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80`} description={"Chicken spice and everything nice"}/>
+              <BasicCard name={'Salmon Bowl'} description={"Salmon your inner chef"}imgSrc={'https://fitfoodiefinds.com/wp-content/uploads/2020/05/fiest-salmon-bowls-1sq.jpg'}/>
             </div>
         )
         }

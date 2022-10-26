@@ -46,6 +46,7 @@ function App() {
         <Backdrop
         sx={{ color: 'white',bgcolor:'rgba(255, 255, 255, 0.5)', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={popup}
+        onClick={()=>{setPopup(false)}}
       >
         <PopupCard setPopup={setPopup}/>
       </Backdrop>
