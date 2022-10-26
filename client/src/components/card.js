@@ -9,8 +9,21 @@ import AddIcon from '@mui/icons-material/Add';
 
 import {Link} from '@mui/material';
 
-const BasicCard = ({name,imgSrc,description,price}) =>{
- 
+const BasicCard = ({nutDict={p:16,f:5,c:15},name,ease,time,imgSrc,description,price,setPrice,setMenuOpen,setImgSrc}) =>{
+
+  const tomatoScore=()=>{
+   if (ease===3){
+    return ("🍅🍅🍅")
+   } 
+   else if (ease===2){
+    return ("🍅🍅⭕")
+   }
+   else if (ease===1){
+    return ("🍅⭕⭕")
+   }
+  }
+
+
   let navigate=useNavigate();
   return (
     <div class="relative w-fit max-w-fit max-h-xs h-fit overflow-hidden mx-2.5 mt-2 rounded-lg border border-gray-0 shadow-md group ">
@@ -35,16 +48,16 @@ const BasicCard = ({name,imgSrc,description,price}) =>{
       </div>
 
       <div class="relative w-full justify-center">
-        <div class="absolute border-white border-2 w-full right-0">1g</div> 
+        <div class="absolute border-white border-2 w-full right-0">{nutDict.c}g</div> 
       </div>
       <div class="relative w-full justify-center">
-        <div class="border-white border-2 w-full m-auto">5g</div>
+        <div class="border-white border-2 w-full m-auto">{nutDict.p}g</div>
       </div>
       <div class="relative w-full justify-center">
-        <div class="border-white border-2 w-full m-auto">0.5g</div>
+        <div class="border-white border-2 w-full m-auto">{nutDict.f}g</div>
       </div>
       <div class="relative w-full justify-center">
-        <div class="absolute border-white border-2 w-full left-0">110kcal</div>
+        <div class="absolute border-white border-2 w-full left-0">{nutDict.p*4+nutDict.f*8+nutDict.c*4}kcal</div>
       </div>
     </div>
     <div></div>
@@ -53,14 +66,15 @@ const BasicCard = ({name,imgSrc,description,price}) =>{
     <div class="grid grid-cols-3 grid-rows-2">
       <div class="row-span-1">
       <p class="row-span-1 mb-0">Difficulty:</p>
-      🍅⭕⭕
+      {tomatoScore()}
       </div>
       <div class="row-span-1">
       <p class="row-span-1 mb-0">Time:</p>
-      <span class="font-bold">35 Min</span>
+      <span class="font-bold">{time}</span>
       </div>
       <div class="relative row-span-1">
-      <button  class="absolute mt-1 left-0 items-center py-2 px-3 text-md font-medium text-center text-white bg-red-400 rounded-lg hover:bg-red-700">
+      <button  class="absolute mt-1 left-0 items-center py-2 px-3 text-md font-medium text-center text-white bg-red-400 rounded-lg hover:bg-red-700"
+      onClick={()=>{setPrice(price);setImgSrc(imgSrc);setMenuOpen(true)}}>
             Customize
         </button>
       </div>

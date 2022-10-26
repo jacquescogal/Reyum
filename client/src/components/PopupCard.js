@@ -11,7 +11,7 @@ const PopupCard = ({setPopup}) => {
               </svg>
             </button>
     <a >
-        <img class="rounded-t-lg" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt="" />
+        <img class="rounded-t-lg object-cover md:h-base" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2FsYWR8ZW58MHx8MHx8&auto=format&fit=crop&w=600&q=60" alt="" />
     </a>
     <div class="p-5">
         <a >

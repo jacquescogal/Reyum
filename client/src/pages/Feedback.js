@@ -11,7 +11,7 @@ const Feedback = ({setPageTitle}) => {
       </div>
       <div class="bg-orange-100 p-2 grid grid-row-3 grid-col-1">
       <span class="text-5xl font-sans font-semibold underline">Contact Us</span>
-      <span class="text-base no-underline">Hotline: +65 1234-5678</span>
+      <span class="text-base no-underline mt-1">Hotline: +65 1234-5678</span>
       <span class="text-base no-underline">E-Mail: support@reyum.com</span>
       </div>
     </div>

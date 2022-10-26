@@ -23,45 +23,60 @@ const Header=({tabSelect,setTabSelect})=> {
 
   return (
       <div class='flex justify-center bg-white width-5/6 sticky'>
-        <button class={(tabSelect['All']==false)?'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 bg-orange-100'} onClick={()=>{
+        <button class={(tabSelect['All']==false)?'text-xs md:text-xl text-center text-black font-sans font-semibold w-fit md:w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 bg-orange-100'} onClick={()=>{
             setTabSelect({
               All:true,
               Signature:false,
+              Rotation:false,
               Vegetarian:false,
               Plus:false
             });
           }}>All
-          <span class='text-xl'>👨‍🍳</span>
+          <span class='text-xs md:text-xl'>👨‍🍳</span>
           </button>
-          <button class={(tabSelect['Signature']==false)?'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 bg-orange-100'} onClick={()=>{
+          <button class={(tabSelect['Signature']==false)?'text-xs md:text-xl text-center text-black font-sans font-semibold w-fit md:w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 bg-orange-100'} onClick={()=>{
             setTabSelect({
               All:false,
               Signature:true,
+              Rotation:false,
               Vegetarian:false,
               Plus:false
             });
           }}>Signatures
-          <span class='text-xl'>🍳</span>
+          <span class='text-xs md:text-xl'>🍳</span>
           </button>
-          <button class={(tabSelect['Vegetarian']==false)?'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 bg-orange-100'} onClick={()=>{
+          <button class={(tabSelect['Vegetarian']==false)?'text-xs md:text-xl text-center text-black font-sans font-semibold w-fit md:w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 bg-orange-100'} onClick={()=>{
             setTabSelect({
               All:false,
               Signature:false,
+              Rotation:false,
               Vegetarian:true,
               Plus:false
             });
           }}>Vegetarian
-          <span class='text-xl'>🥕</span>
+          <span class='text-xs md:text-xl'>🥕</span>
           </button>
-          <button button class={(tabSelect['Plus']==false)?'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 bg-orange-100'} onClick={()=>{
+          <button class={(tabSelect['Rotation']==false)?'text-xs md:text-xl text-center text-black font-sans font-semibold w-fit md:w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 bg-orange-100'} onClick={()=>{
             setTabSelect({
               All:false,
               Signature:false,
+              Rotation:true,
+              Vegetarian:false,
+              Plus:false
+            });
+          }}>Rotation
+          <span class='text-xs md:text-xl'>👻</span>
+          </button>
+          <button button class={(tabSelect['Plus']==false)?'text-xs md:text-xl text-center text-black font-sans font-semibold w-fit md:w-60 h-10 hover:bg-orange-100':'text-center text-black font-sans font-semibold w-fit md:w-60 h-10 bg-orange-100'} onClick={()=>{
+            setTabSelect({
+              All:false,
+              Signature:false,
+              Rotation:false,
               Vegetarian:false,
               Plus:true
             });
           }}>Plus+
-          <span class='text-xl'>⭐</span>
+          <span class='text-xs md:text-xl'>⭐</span>
           </button>
       </div>
   );

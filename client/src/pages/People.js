@@ -47,7 +47,7 @@ const People = ({setPageTitle}) => {
                       <span>Free Plus Kit: <span class="font-semibold">1 redemption</span></span>
                   </li>
               </ul>
-              <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Beta does not support subscription")}}>Get Started</button>
+              <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Subscription plans to be implemented in future build - Reyum Engineering Lead J")}}>Get Started</button>
           </div>
           <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow  xl:p-8  ">
               <h3 class="mb-4 text-2xl font-semibold">Plump Tomato</h3>
@@ -82,7 +82,7 @@ const People = ({setPageTitle}) => {
                       <span>Free Plus Kit: <span class="font-semibold">5 redemptions</span></span>
                   </li>
               </ul>
-              <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Beta does not support subscription")}}>Get Started</button>
+              <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Subscription plans to be implemented in future build - Reyum Engineering Lead J")}}>Get Started</button>
           </div>
           <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-gray-900 bg-white rounded-lg border border-gray-100 shadow  xl:p-8  ">
               <h3 class="mb-4 text-2xl font-semibold">Ugly Delicious Tomato</h3>
@@ -117,7 +117,7 @@ const People = ({setPageTitle}) => {
                       <span>Free Plus Kit: <span class="font-semibold">20 redemptions</span></span>
                   </li>
               </ul>
-              <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Beta does not support subscription")}}>Get Started</button>
+              <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Subscription plans to be implemented in future build - Reyum Engineering Lead J")}}>Get Started</button>
           </div>
       </div>
   </div>

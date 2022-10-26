@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Content from './pages/Content';
 import Order from './pages/Order';
 import History from './pages/History'
@@ -40,13 +40,16 @@ function App() {
     .then((data)=>setData(data.message));
   },[]);
 
+  const myRef=useRef(null);
+
   return (
     <div className="App">
         <ToastContainer/>
         <Backdrop
         sx={{ color: 'white',bgcolor:'rgba(255, 255, 255, 0.5)', zIndex: (theme) => theme.zIndex.drawer + 1 }}
         open={popup}
-        onClick={()=>{setPopup(false)}}
+        onClick={(e)=>{(myRef.current==e.target)?setPopup(false):console.log(e)}}
+        ref={myRef}
       >
         <PopupCard setPopup={setPopup}/>
       </Backdrop>

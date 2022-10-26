@@ -22,13 +22,13 @@ import { useEffect } from 'react';
 const Header=({login,setLogin})=> {
 
   return (
-      <div class='flex justify-center bg-white width-5/6'>
-          <button class={(login==true)?'bg-orange-100 text-center text-black font-sans font-semibold w-60 h-10 hover:bg-orange-100'
-          :'text-center text-black font-sans font-semibold w-60 h-10 hover:bg-orange-100'} onClick={()=>setLogin(true)}>Login
+      <div class='flex justify-center bg-white md:width-5/6'>
+          <button class={(login==true)?'bg-orange-100 text-center text-xs md:text-xl text-black font-sans font-semibold w-20 md:w-60 h-10 hover:bg-orange-100'
+          :'text-center text-black text-xs md:text-xl  font-sans font-semibold w-20 md:w-60 h-10 hover:bg-orange-100'} onClick={()=>setLogin(true)}>Login
           <span class='text-xl'>🔓</span>
           </button>
-          <button class={(login==false)?'bg-orange-100 text-center text-black font-sans font-semibold w-60 h-10 hover:bg-orange-100'
-          :'text-center text-black font-sans font-semibold w-60 h-10 hover:bg-orange-100'} onClick={()=>setLogin(false)}>Register
+          <button class={(login==false)?'bg-orange-100 text-center text-black text-xs md:text-xl  font-sans font-semibold w-20 md:w-60 h-10 hover:bg-orange-100'
+          :'text-center text-black text-xs md:text-xl  font-sans font-semibold w-20 md:w-60 h-10 hover:bg-orange-100'} onClick={()=>setLogin(false)}>Register
           <span class='text-xl'>🔑</span>
           </button>
       </div>

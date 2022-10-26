@@ -34,7 +34,7 @@ const Login = ({setPageTitle}) => {
         </div>
         <div class="flex items-start mb-1">
         </div>
-        <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Beta does not support login")}}>Submit</button>
+        <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Account System to be implemented in future build - Reyum Engineering Lead J")}}>Submit</button>
         <div class="flex items-start h-1"/>
 </div>:
         <div class="bg-gradient-to-b from-orange-100 to-orange-200">
@@ -83,7 +83,7 @@ const Login = ({setPageTitle}) => {
         </div>
         <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-400">I agree with the <a href="#" class="text-blue-600 hover:underline dark:text-blue-500">terms and conditions</a>.</label>
         </div>
-        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Beta does not support register")}}>Submit</button>
+        <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center" onClick={()=>{toast.error("Account System to be implemented in future build - Reyum Engineering Lead J")}}>Submit</button>
         <div class="flex items-start h-1"/>
 </div>}
     </div>
